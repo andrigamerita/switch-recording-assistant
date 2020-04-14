@@ -26,6 +26,7 @@ While playing a game, you usually focus on playing that game, and not on countin
 * Audio alerts
 * Proper in-app guide
 * Status notification
+* Count of passed hours, minutes and seconds like a normal stopwatch
 * ????
 
 ---
