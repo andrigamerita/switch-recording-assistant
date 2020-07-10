@@ -33,3 +33,12 @@ While playing a game, you usually focus on playing that game, and not on countin
 
 ## Download
 Head over to [Releases](https://github.com/andrigamerita/switch-recording-assistant/releases).
+
+---
+
+## License
+Switch Recording Assistant is licensed under the GPLv3 license. You should have received a copy of it along with this program. If not, visit [gnu.org](https://www.gnu.org/licenses/gpl-3.0.en.html).
+
+You are allowed to run this program, read the source code, create modified copies, and share original or modified copies, as long as every original copyright notice is kept and the software uses the same (or similar) license as the original. This also means you can't use my code in software released under a proprietary license.
+
+Copyright (C) 2020, Octo / OctoAndri
