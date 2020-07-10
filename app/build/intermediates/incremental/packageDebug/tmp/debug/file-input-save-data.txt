@@ -1,7 +1,7 @@
 #Internal package file, do not edit.
-#Fri Jul 10 16:29:26 CEST 2020
+#Fri Jul 10 19:08:34 CEST 2020
 0.baseType=DIRECTORY
-0.base=C\:\\Users\\user\\Documents\\Android-projects\\switch-recording-assistant-master\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
+0.base=C\:\\Users\\user\\Documents\\GitHub\\switch-recording-assistant\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
 0.path=classes.dex
 0.set=DEX
 count=1

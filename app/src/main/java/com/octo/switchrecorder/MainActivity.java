@@ -35,6 +35,8 @@ import android.widget.Switch;
 import android.widget.EditText;
 import android.content.SharedPreferences;
 import android.content.Context;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Vibrator;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -59,7 +61,6 @@ public class MainActivity extends Activity {
 	private double alertDuration = 0;
 	private double timerHasBeenOn = 0;
 	private double alreadyPressed = 0;
-	
 	private LinearLayout linear1;
 	private TextView textview2;
 	private TextView textview3;
@@ -94,9 +95,10 @@ public class MainActivity extends Activity {
 	private Vibrator vibr;
 	private TimerTask time;
 	private TimerTask timeLaps;
-	private SoundPool cue;
 	private TimerTask visualAlertRed;
-	private Intent goinfoa = new Intent();
+	private Intent openGithub = new Intent();
+	private Intent openWordpress = new Intent();
+	private AlertDialog.Builder InfoDialog;
 	@Override
 	protected void onCreate(Bundle _savedInstanceState) {
 		super.onCreate(_savedInstanceState);
@@ -104,12 +106,6 @@ public class MainActivity extends Activity {
 		initialize(_savedInstanceState);
 		initializeLogic();
 		mp=MediaPlayer.create(this, R.raw.cue);
-	}
-
-	public static class ToastMsg {
-		public static void showMessage(Context _context, String _s) {
-			Toast.makeText(_context, _s, Toast.LENGTH_SHORT).show();
-		}
 	}
 
 	private void initialize(Bundle _savedInstanceState) {
@@ -145,11 +141,11 @@ public class MainActivity extends Activity {
 		textview8 = (TextView) findViewById(R.id.textview8);
 		theme = getSharedPreferences("current", Activity.MODE_PRIVATE);
 		vibr = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-		
+		InfoDialog = new AlertDialog.Builder(this);
 		goinfo.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _view) {
-				startActivity(goinfoa);
+				InfoDialog.create().show();
 			}
 		});
 		
@@ -288,7 +284,6 @@ public class MainActivity extends Activity {
 			@Override
 			public void onCheckedChanged(CompoundButton _param1, boolean _param2)  {
 				final boolean _isChecked = _param2;
-				ToastMsg.showMessage(getApplicationContext(), "Not yet available! Wait for the next app update.");
 				if (_isChecked) {
 					soundOn = 1;
 				}
@@ -386,6 +381,31 @@ public class MainActivity extends Activity {
 		});
 	}
 	private void initializeLogic() {
+		InfoDialog.setTitle("Info and Help");
+		InfoDialog.setMessage("What's the concept behind this app?\nNot everyone has a capture card to record gameplays on a console like the Nintendo Switch. The Switch in particular, has a built-in screen recorder (that also records game audio), but has a major limitation: you can only record the last 30 seconds of gameplay. This app aims to fix this issue and lets you record long gameplays.\n\nWhy the need for an app like this?\nWhile playing a game, you usually focus on playing that game, and not on counting time in your head or watching a stopwatch go by its way. With this app, you only either need to keep a slight eye on your phone's screen for color flashes (even with just peripheral vision), feel for vibrations or even audio cues. Then, when feeling your chosen trigger, long-press the capture button and your done. This is a good way to keep the maximum focus possible on your gameplay.\n\nHow to use the app?\nIt's simple. Boot up the game on your Switch, then tweak the settings of the app as you wish, like which triggers to use and how often the app should call them. After a certain amount of time that you have decided, the app will let you know in a smart way that you need to press the Capture Button on your Switch controller to save a game clip. The app will continue to send you triggers until you stop or pause it.\nWhen you have finished recording what you wanted to, stop the app and transfer the clips from your Switch to your device (phone, PC, ecc..) and just join them together! You now  have a normal, long recorded gameplay.\n\nFor more info, visit my Github or Wordpress.\n");
+		InfoDialog.setNeutralButton("Close", new DialogInterface.OnClickListener()
+		{
+			@Override
+			public void onClick(DialogInterface _dialog, int _which)
+			{
+			}
+		});
+		InfoDialog.setNegativeButton("Github", new DialogInterface.OnClickListener()
+		{
+			@Override
+			public void onClick(DialogInterface _dialog, int _which)
+			{
+				startActivity(openGithub);
+			}
+		});
+		InfoDialog.setPositiveButton("Wordpress", new DialogInterface.OnClickListener()
+		{
+			@Override
+			public void onClick(DialogInterface _dialog, int _which)
+			{
+				startActivity(openWordpress);
+			}
+		});
 		timerOn = 0;
 		timerHasBeenOn = 0;
 		timerDoneSecs = -1;
@@ -395,8 +415,10 @@ public class MainActivity extends Activity {
 		secondsalerttext.setText(String.valueOf((long)(waitsecs)).concat(" seconds"));
 		soundOn = 0;
 		vibrationOn = 0;
-		goinfoa.setAction(Intent.ACTION_VIEW);
-		goinfoa.setData(Uri.parse("https://octospacc.wordpress.com/2020/04/14/switch-recording-assistant-app"));
+		openWordpress.setAction(Intent.ACTION_VIEW);
+		openWordpress.setData(Uri.parse("https://octospacc.wordpress.com/2020/04/14/switch-recording-assistant-app"));
+		openGithub.setAction(Intent.ACTION_VIEW);
+		openGithub.setData(Uri.parse("https://github.com/andrigamerita/switch-recording-assistant"));
 		if (theme.getString("current", "").equals("")) {
 			theme.edit().putString("current", "L").commit();
 		}
