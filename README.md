@@ -41,8 +41,8 @@ Head over to [Releases](https://github.com/andrigamerita/switch-recording-assist
 
 ## Screenshots
 Here are some screenshots of the app. Two, in fact, as only one main screen is present.
-![Light Theme]()
-![Dark Theme]()
+![Light Theme](https://raw.githubusercontent.com/andrigamerita/switch-recording-assistant/master/other/screen_light.png)
+![Dark Theme](https://raw.githubusercontent.com/andrigamerita/switch-recording-assistant/master/other/screen_dark.png)
 
 ---
 
