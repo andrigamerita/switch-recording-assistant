@@ -1,3 +1,12 @@
+/*
+| Switch Recording Assistant
+| Copyright (C) 2020, Octo / OctoAndri
+| github.com/andrigamerita/switch-recording-assistant
+|
+| Licensed under the GPLv3 License
+| gnu.org/licenses/gpl-3.0.en.html
+ */
+
 package com.octo.switchrecorder;
 
 import android.app.Activity;
@@ -80,7 +89,7 @@ public class MainActivity extends Activity {
 	private TextView textview7;
 	private Switch themeswitch;
 	private TextView textview8;
-	
+	private MediaPlayer mp;
 	private SharedPreferences theme;
 	private Vibrator vibr;
 	private TimerTask time;
@@ -94,8 +103,15 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.main);
 		initialize(_savedInstanceState);
 		initializeLogic();
+		mp=MediaPlayer.create(this, R.raw.cue);
 	}
-	
+
+	public static class ToastMsg {
+		public static void showMessage(Context _context, String _s) {
+			Toast.makeText(_context, _s, Toast.LENGTH_SHORT).show();
+		}
+	}
+
 	private void initialize(Bundle _savedInstanceState) {
 		
 		linear1 = (LinearLayout) findViewById(R.id.linear1);
@@ -179,7 +195,7 @@ public class MainActivity extends Activity {
 										timerDoneLaps = timerDoneLaps + 1;
 										vscroll2.setBackgroundColor(0xFFF44336);
 										if (soundOn == 1) {
-											
+											mp.start();
 										}
 										if (vibrationOn == 1) {
 											vibr.vibrate((long)(alertDuration));
@@ -272,7 +288,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onCheckedChanged(CompoundButton _param1, boolean _param2)  {
 				final boolean _isChecked = _param2;
-				SketchwareUtil.showMessage(getApplicationContext(), "Not yet available! Wait for the next app update.");
+				ToastMsg.showMessage(getApplicationContext(), "Not yet available! Wait for the next app update.");
 				if (_isChecked) {
 					soundOn = 1;
 				}
@@ -491,5 +507,5 @@ public class MainActivity extends Activity {
 	public int getDisplayHeightPixels(){
 		return getResources().getDisplayMetrics().heightPixels;
 	}
-	
+
 }

@@ -1,0 +1,4 @@
+#Fri Jul 10 16:29:26 CEST 2020
+base.0=C\:\\Users\\user\\Documents\\Android-projects\\switch-recording-assistant-master\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
+path.0=classes.dex
+renamed.0=classes.dex

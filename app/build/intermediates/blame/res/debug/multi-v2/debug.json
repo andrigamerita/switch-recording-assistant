@@ -1,0 +1,62 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\user\\Documents\\Android-projects\\switch-recording-assistant-master\\app\\build\\intermediates\\res\\merged\\debug\\values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\user\\Documents\\Android-projects\\switch-recording-assistant-master\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "1,8,15,22",
+                        "startColumns": "1,1,1,1",
+                        "startOffsets": "13,458,914,1360",
+                        "endLines": "7,14,21,24",
+                        "endColumns": "9,9,9,9",
+                        "endOffsets": "456,912,1358,1466"
+                    },
+                    "to": {
+                        "startLines": "8,15,22,29",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "393,841,1300,1749",
+                        "endLines": "14,21,28,31",
+                        "endColumns": "9,9,9,9",
+                        "endOffsets": "836,1295,1744,1855"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\user\\Documents\\Android-projects\\switch-recording-assistant-master\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "3,4,5,1,2",
+                        "startColumns": "1,1,1,1,1",
+                        "startOffsets": "105,148,201,13,57",
+                        "endColumns": "42,52,49,43,47",
+                        "endOffsets": "146,199,249,55,103"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,101,157,210,257",
+                        "endColumns": "45,55,52,46,50",
+                        "endOffsets": "96,152,205,252,303"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\user\\Documents\\Android-projects\\switch-recording-assistant-master\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "1",
+                        "startOffsets": "13",
+                        "endColumns": "81",
+                        "endOffsets": "93"
+                    },
+                    "to": {
+                        "startLines": "7",
+                        "startColumns": "4",
+                        "startOffsets": "308",
+                        "endColumns": "84",
+                        "endOffsets": "388"
+                    }
+                }
+            ]
+        }
+    ]
+}

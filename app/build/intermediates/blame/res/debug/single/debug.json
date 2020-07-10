@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\user\\Documents\\Android-projects\\switch-recording-assistant-master\\app\\build\\intermediates\\res\\merged\\debug\\raw_cue.ogg.flat",
+        "source": "C:\\Users\\user\\Documents\\Android-projects\\switch-recording-assistant-master\\app\\src\\main\\res\\raw\\cue.ogg"
+    },
+    {
+        "merged": "C:\\Users\\user\\Documents\\Android-projects\\switch-recording-assistant-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_main.xml.flat",
+        "source": "C:\\Users\\user\\Documents\\Android-projects\\switch-recording-assistant-master\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Documents\\Android-projects\\switch-recording-assistant-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_app_icon.png.flat",
+        "source": "C:\\Users\\user\\Documents\\Android-projects\\switch-recording-assistant-master\\app\\src\\main\\res\\drawable-xhdpi\\app_icon.png"
+    }
+]
