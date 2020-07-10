@@ -2,7 +2,6 @@
 
 A simple tool, created to make it easy to record long game clips on Nintendo Switch.
 
-
 ---
 
 ## What's the concept behind this app?
@@ -15,15 +14,14 @@ On a Switch you can record the last 30 seconds of gameplay while playing just by
 While playing a game, you usually focus on playing that game, and not on counting time in your head or watching a stopwatch go by its way. With this app, you only either need to keep a slight eye on your phone's screen for color flashes (even with just peripheral vision), feel for vibrations or even audio cues. Then, when feeling your chosen trigger, long-press the capture button and your done. This is a good way to keep the maximum focus possible on your gameplay.
 
 ## Features of this app
-* Enable **audio cues or vibration**, or just keep them disabled
-* Choose the **duration of the triggers**
-* Choose the lenght of every clip to record (and with that, **how often the trigger fires**)
-* **Light and Dark** Theme
-* **Keep track** of how many seconds have passed and how many clips have been recorded
-* **Pause the timer** to then resume it, or reset it completely
+* Enable **audio cues or vibration**, or just keep them disabled.
+* Choose the **duration of vibration and visual trigger**.
+* Choose the lenght of every clip to record (and with that, **how often the trigger fires**).
+* **Light** and **Dark** Theme.
+* **Keep track** of how many seconds have passed and how many clips have been recorded.
+* **Pause the timer** to then resume it, or reset it completely.
 
 ## TODO
-* Audio alerts
 * Proper in-app guide
 * Status notification
 * Count of passed hours, minutes and seconds like a normal stopwatch
@@ -33,3 +31,12 @@ While playing a game, you usually focus on playing that game, and not on countin
 
 ## Download
 Head over to [Releases](https://github.com/andrigamerita/switch-recording-assistant/releases).
+
+---
+
+## License
+Switch Recording Assistant is licensed under the GPLv3 license. You should have received a copy of it along with this program. If not, visit [gnu.org](https://www.gnu.org/licenses/gpl-3.0.en.html).
+
+You are allowed to run this program, read the source code, create modified copies, and share original or modified copies, as long as every original copyright notice is kept and the software uses the same (or similar) license as the original. This also means you can't use my code in software released under a proprietary license.
+
+Copyright (C) 2020, Octo / OctoAndri
